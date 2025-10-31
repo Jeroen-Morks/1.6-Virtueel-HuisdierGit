@@ -178,7 +178,7 @@ if (zwarteGat == true){
   }
   RESETMENU();
 
-  Muislocatie();
+ // Muislocatie();
 }
 //hoi
 function Huisdier(){

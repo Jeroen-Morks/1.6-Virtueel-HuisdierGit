@@ -180,7 +180,7 @@ if (zwarteGat == true){
 
   Muislocatie();
 }
-
+//hoi
 function Huisdier(){
 
   strokeWeight (0);

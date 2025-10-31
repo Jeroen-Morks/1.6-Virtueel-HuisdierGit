@@ -559,6 +559,7 @@ function DOODoorzaak(){
   if (energie > 500){ //doodoorzaak 2
     opHolGeslagenEnergie = true;
   }
+  if (honger < 0 || geluk < 0 || gezond < 0){doodmanier = 4, dood = true}
 }
 
 function OngecontroleerdGegroei(){
@@ -922,8 +923,52 @@ function Menus(){
       rect (500, 300, 280, 60);
       rect (500, 380, 280, 60);
 
+      
+      strokeWeight (0);
       fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 0.5 energie 0.5 xp: 1', 365, 95);
+      fill (255, 255, 0);
+      if (geld < 5){fill (255, 0, 0)}
+      textSize (30);
+      text ('5 geld =', 380, 70);
+      image (voedsel01, 500, 35, 40, 40);
 
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 2.5 energie 2.5 xp: 5', 365, 175);
+      fill (255, 255, 0);
+      if (geld < 25){fill (255, 0, 0)}
+      textSize (30);
+      text ('25 geld =', 380, 150);
+      image (voedsel02, 510, 130, 40, 10);
+      
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 6 energie 2.4 xp: 20', 365, 255);
+      fill (255, 255, 0);
+      if (geld < 300){fill (255, 0, 0)}
+      textSize (30);
+      text ('300 geld =', 380, 230);
+      image (voedsel03, 520, 210, 40, 10);
+
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 0.75 energie 5 xp: 50', 365, 335);
+      fill (255, 255, 0);
+      if (geld < 800){fill (255, 0, 0)}
+      textSize (30);
+      text ('800 geld =', 380, 310);
+      image (voedsel04, 520, 290, 40, 10);
+
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 3.5 energie 3.5 xp: 30', 365, 415);
+      fill (255, 255, 0);
+      if (geld < 400){fill (255, 0, 0)}
+      textSize (30);
+      text ('400 geld =', 380, 390);
+      image (voedsel05, 520, 355, 40, 40);
 
     }
     if (winkelMenu == 2){ //voedsel maken
@@ -935,6 +980,48 @@ function Menus(){
       rect (500, 220, 280, 60);
       rect (500, 300, 280, 60);
       rect (500, 380, 280, 60);
+      strokeWeight (0);
+      
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 2,25 energie 1,95 xp: 10', 365, 255);
+      fill (0, 255, 0);
+      if (voedsel2 < 5){fill (255, 0, 0);}
+      textSize (30);
+      text ('5      +', 380, 230);
+      if (voedsel3 < 1){fill (255, 0, 0);} else {fill (0, 255, 0);}
+      text ('1      = 10', 460, 230);
+      image (voedsel02, 400, 215, 40, 10);
+      image (voedsel03, 480, 215, 40, 10);
+      image (voedselplus01, 590, 200, 40, 40);
+
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: voedsel: 25 energie 15 xp: 250', 365, 335);
+      fill (0, 255, 0);
+      if (voedsel1 < 5){fill (255, 0, 0);}
+      textSize (20);
+      text ('5      +', 380, 310);
+      if (voedsel3 < 2){fill (255, 0, 0);} else {fill (0, 255, 0);}
+      text ('2      +', 440, 310);
+      if (voedsel5 < 1){fill (255, 0, 0);} else {fill (0, 255, 0);}
+      text ('1      =', 500, 310);
+      image (voedsel01, 395, 290, 26, 26);
+      image (voedsel03, 455, 300, 26, 6);
+      image (voedsel05, 515, 290, 26, 26);
+      image (voedselplus02, 570, 280, 40, 40);
+      
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid:NEE', 365, 415);
+      fill (0, 255, 0);
+      if (voedsel4 < 25){fill (255, 0, 0);}
+      textSize (30);
+      text ('25      =', 380, 390);
+      image (voedsel05, 420, 355, 40, 40);
+      image (voedselplus03, 490, 355, 40, 50);
+
+
     }
     if (winkelMenu == 3){ //voedsel maken
       strokeWeight (0);
@@ -946,6 +1033,32 @@ function Menus(){
       rect (500, 220, 280, 60);
       rect (500, 300, 280, 60);
       rect (500, 380, 280, 60);
+
+      strokeWeight (0);
+      fill (255, 255, 0);
+      if (geld < 25){fill (255, 0, 0)}
+      textSize (30);
+      text ('25 geld = 50 water', 375, 150);
+
+      fill (255, 255, 0);
+      if (geld < 100){fill (255, 0, 0)}
+      textSize (27);
+      text ('100 geld = 300 water', 375, 230);
+
+      fill (255, 255, 0);
+      if (geld < 250){fill (255, 0, 0)}
+      textSize (25);
+      text ('250 geld = 1000 water', 375, 310);
+
+      fill (255);
+      textSize (15);
+      text ('Kwaliteid: genezen: 5 xp: 150', 365, 415);
+      fill (255, 255, 0);
+      if (geld < 250){fill (255, 0, 0)}
+      textSize (30);
+      text ('1200 geld = ', 375, 390);
+      image (pil1, 540, 360, 40, 40);
+
     }
   }
 
@@ -1240,7 +1353,7 @@ if (minigame == 0){ //reset spel
       medicijnen -= 1;
       genezen = 2.5;
       genezentijd = 2;
-      xp += 75;
+      xp += 150;
     }
 
     if (Knop(390, 450, 430, 490)){
@@ -1407,7 +1520,7 @@ if (minigame == 0){ //reset spel
      //medicijnen
       if (Knop (360, 640, 350, 410) && geld >= 400){
         medicijnen += 1;
-        geld -= 400;
+        geld -= 1200;
       }
     }
   }
@@ -1605,6 +1718,8 @@ function Load(){ //waarde = parseInt(localStorage.getItem('item')); = load
     if (kubusB == null){kubusB = 100;}
 
     badderen = false;
+    menu = 0;
+    winkelMenu = 0;
 }
 
 function Imagetest(){
